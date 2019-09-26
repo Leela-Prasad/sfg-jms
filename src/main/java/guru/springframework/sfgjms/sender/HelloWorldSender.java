@@ -23,7 +23,7 @@ public class HelloWorldSender {
     private final JmsTemplate jmsTemplate;
     private final ObjectMapper objectMapper;
 
-    // @Scheduled(fixedRate = 2000)
+    @Scheduled(fixedRate = 2000)
     public void sendMessage() {
         System.out.println("Sending Message");
         HelloWorldMessage message = HelloWorldMessage
@@ -36,7 +36,7 @@ public class HelloWorldSender {
         System.out.println("Message Sent");
     }
 
-    @Scheduled(fixedRate = 2000)
+    // @Scheduled(fixedRate = 2000)
     public void sendAndReceiveMessage() throws JMSException {
         HelloWorldMessage message = HelloWorldMessage
                 .builder()

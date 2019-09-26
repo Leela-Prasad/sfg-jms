@@ -12,14 +12,14 @@ public class SfgJmsApplication {
 	public static void main(String[] args) throws Exception {
 
 		// Embedded Active MQ Server Configuration
-		ActiveMQServer server = ActiveMQServers.newActiveMQServer(new ConfigurationImpl()
+		/*ActiveMQServer server = ActiveMQServers.newActiveMQServer(new ConfigurationImpl()
 																	.setPersistenceEnabled(false)
 																	.setJournalDirectory("target/data/journal")
 																	.setSecurityEnabled(false)
 																	.addAcceptorConfiguration("invm", "vm://0")
 		);
 
-		server.start();
+		server.start();*/
 
 		SpringApplication.run(SfgJmsApplication.class, args);
 	}
